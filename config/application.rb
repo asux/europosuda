@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
-module Tableware
+module Europosuda
   class Application < Rails::Application
   require 'spree_site'
   config.middleware.use "RedirectLegacyProductUrl"
