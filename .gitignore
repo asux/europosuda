@@ -4,5 +4,6 @@ log/*.log
 tmp/
 .redcar/*
 nbproject/*
+.project
 *.swp
 *.swo
