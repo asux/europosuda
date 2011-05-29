@@ -6,7 +6,6 @@ gem 'rails', '3.0.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'dalli'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -18,6 +17,11 @@ group :development, :test do
   # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
   gem 'ruby-debug', :platforms => :ruby_18
   gem 'ruby-debug19', :require => 'ruby-debug', :platforms => :ruby_19
+end
+
+group :production do
+  gem 'dalli'
+  gem 'spree_heroku', :group => :production
 end
 
 # Bundle the extra gems:
@@ -43,6 +47,5 @@ gem 'spree_robokassa'
 gem 'spree_yandex_market'
 gem 'spree_address_book'
 gem 'spree_dynamic_sitemaps'
-gem 'spree_heroku'
 gem 'synergy', '~> 0.50.0'
 gem 'synergy_default_theme', '1.0.1'
