@@ -21,7 +21,7 @@ end
 
 group :production do
   gem 'dalli'
-  gem 'spree_heroku', :group => :production
+  gem 'spree_heroku'
 end
 
 # Bundle the extra gems:
