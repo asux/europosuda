@@ -5,15 +5,16 @@ gem 'rails', '3.0.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
+gem 'dalli'
 
 # Use unicorn as the web server
 # gem 'unicorn'
 
-group :development do
-  # Deploy with Capistrano
-  gem 'capistrano'
+# Deploy with Capistrano
+gem 'capistrano', :group => :development
 
+group :development, :test do
   # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
   gem 'ruby-debug', :platforms => :ruby_18
   gem 'ruby-debug19', :require => 'ruby-debug', :platforms => :ruby_19
